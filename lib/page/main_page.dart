@@ -5,6 +5,7 @@ import 'package:future_job/page/home_page.dart';
 import 'package:future_job/page/notification_page.dart';
 import 'package:future_job/providers/page_provider.dart';
 import 'package:future_job/theme.dart';
+import 'package:future_job/widgets/custom_navigation_icon.dart';
 import 'package:provider/provider.dart';
 
 class MainPage extends StatelessWidget {
@@ -27,50 +28,6 @@ class MainPage extends StatelessWidget {
       }
     }
 
-    // Widget customButtonNavigation() {
-    //   return Align(
-    //     alignment: Alignment.bottomCenter,
-    //     child: Container(
-    //       margin: EdgeInsets.only(top: 30),
-    //       child: BottomNavigationBar(
-    //         type: BottomNavigationBarType.fixed,
-    //         showSelectedLabels: false,
-    //         unselectedItemColor: Color(0xffB3B5C4),
-    //         selectedItemColor: Color(0xff272C2F),
-    //         elevation: 0,
-    //         currentIndex: 0,
-    //         iconSize: 24,
-    //         items: [
-    //           BottomNavigationBarItem(
-    //             icon: ImageIcon(
-    //               AssetImage('assets/images/icon_apps.png'),
-    //             ),
-    //             label: '',
-    //           ),
-    //           BottomNavigationBarItem(
-    //             icon: ImageIcon(
-    //               AssetImage('assets/images/icon_notification.png'),
-    //             ),
-    //             label: '',
-    //           ),
-    //           BottomNavigationBarItem(
-    //             icon: ImageIcon(
-    //               AssetImage('assets/images/icon_love.png'),
-    //             ),
-    //             label: '',
-    //           ),
-    //           BottomNavigationBarItem(
-    //             icon: ImageIcon(
-    //               AssetImage('assets/images/icon_user.png'),
-    //             ),
-    //             label: '',
-    //           )
-    //         ],
-    //       ),
-    //     ),
-    //   );
-    // }
-
     Widget customButtonNavigation() {
       return Align(
         alignment: Alignment.bottomCenter,
@@ -81,41 +38,21 @@ class MainPage extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Container(
-                height: 24,
-                width: 24,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/icon_apps.png'),
-                  ),
-                ),
+              CustomIconNavigation(
+                index: 0,
+                imgUrl: 'assets/images/icon_apps.png',
               ),
-              Container(
-                height: 24,
-                width: 24,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/icon_apps.png'),
-                  ),
-                ),
+              CustomIconNavigation(
+                index: 1,
+                imgUrl: 'assets/images/icon_notification.png',
               ),
-              Container(
-                height: 24,
-                width: 24,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/icon_apps.png'),
-                  ),
-                ),
+              CustomIconNavigation(
+                index: 2,
+                imgUrl: 'assets/images/icon_love.png',
               ),
-              Container(
-                height: 24,
-                width: 24,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/icon_apps.png'),
-                  ),
-                ),
+              CustomIconNavigation(
+                index: 3,
+                imgUrl: 'assets/images/icon_user.png',
               ),
             ],
           ),
