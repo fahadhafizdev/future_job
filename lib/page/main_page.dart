@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:future_job/page/home_page.dart';
+import 'package:future_job/providers/page_provider.dart';
 import 'package:future_job/theme.dart';
+import 'package:provider/provider.dart';
 
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var pageProvider = Provider.of<PageProvider>(context);
+
     Widget contentSelected(int currentIndex) {
       switch (currentIndex) {
         case 0:
@@ -61,7 +65,7 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          contentSelected(0),
+          contentSelected(pageProvider.number),
           customButtonNavigation(),
         ],
       ),

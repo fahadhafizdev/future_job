@@ -8,6 +8,7 @@ import 'package:future_job/page/splash_screen.dart';
 import 'package:future_job/page/started_page.dart';
 import 'package:future_job/providers/auth_provider.dart';
 import 'package:future_job/providers/category_provider.dart';
+import 'package:future_job/providers/page_provider.dart';
 import 'package:future_job/providers/user_provider.dart';
 import 'package:future_job/providers/posted_provider.dart';
 import 'package:provider/provider.dart';
@@ -32,7 +33,10 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider<PostedProvider>(
           create: (context) => PostedProvider(),
-        )
+        ),
+        ChangeNotifierProvider<PageProvider>(
+          create: (context) => PageProvider(),
+        ),
       ],
       child: MaterialApp(
         title: 'Future Jobs',
