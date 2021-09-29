@@ -227,7 +227,7 @@ class _SignUpPageState extends State<SignUpPage> {
               } else {
                 userProvider.user = user;
                 Navigator.pushNamedAndRemoveUntil(
-                    context, '/home', (route) => false);
+                    context, '/main-page', (route) => false);
               }
             }
           },
