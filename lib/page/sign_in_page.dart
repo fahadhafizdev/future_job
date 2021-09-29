@@ -149,7 +149,7 @@ class _SignInPageState extends State<SignInPage> {
               } else {
                 userProvider.user = user;
                 Navigator.pushNamedAndRemoveUntil(
-                    context, '/home', (route) => false);
+                    context, '/main-page', (route) => false);
               }
             }
           },

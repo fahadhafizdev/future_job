@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:future_job/page/home_page.dart';
+import 'package:future_job/page/main_page.dart';
 import 'package:future_job/page/sign_in_page.dart';
 import 'package:future_job/page/sign_up_page.dart';
 
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         routes: {
           '/': (context) => SplashScreen(),
+          '/main-page': (context) => MainPage(),
           '/onboarding': (context) => StartedPage(),
           '/sign-in': (context) => SignInPage(),
           '/sign-up': (context) => SignUpPage(),

@@ -184,44 +184,6 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Container(
-        margin: EdgeInsets.only(top: 30),
-        child: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          showSelectedLabels: false,
-          unselectedItemColor: Color(0xffB3B5C4),
-          selectedItemColor: Color(0xff272C2F),
-          elevation: 0,
-          currentIndex: 0,
-          iconSize: 24,
-          items: [
-            BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage('assets/images/icon_apps.png'),
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage('assets/images/icon_notification.png'),
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage('assets/images/icon_love.png'),
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage('assets/images/icon_user.png'),
-              ),
-              label: '',
-            )
-          ],
-        ),
-      ),
     );
   }
 }

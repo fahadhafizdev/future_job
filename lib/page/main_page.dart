@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:future_job/page/home_page.dart';
 import 'package:future_job/theme.dart';
 
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Widget contentSelected(int currentIndex) {
+      switch (currentIndex) {
+        case 0:
+          return HomePage();
+        default:
+          return HomePage();
+      }
+    }
+
     Widget customButtonNavigation() {
       return Align(
         alignment: Alignment.bottomCenter,
@@ -51,6 +61,7 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
+          contentSelected(0),
           customButtonNavigation(),
         ],
       ),
