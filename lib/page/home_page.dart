@@ -165,15 +165,18 @@ class HomePage extends StatelessWidget {
                     // print('this is snapshot');
                     // print(snapshot.data);
                     if (snapshot.connectionState == ConnectionState.done) {
+                      int index = 0;
+                      int maxIndex = snapshot.data.length;
                       return Column(
-                        children: snapshot.data
-                            .map(
-                              (post) => Container(
-                                margin: const EdgeInsets.only(bottom: 26.5),
-                                child: PostedCard(post),
-                              ),
-                            )
-                            .toList(),
+                        children: snapshot.data.map((post) {
+                          index++;
+                          return Container(
+                            margin: EdgeInsets.only(
+                              bottom: (index == maxIndex) ? 26.5 + 200 : 26.5,
+                            ),
+                            child: PostedCard(post),
+                          );
+                        }).toList(),
                       );
                     }
                     return Center(

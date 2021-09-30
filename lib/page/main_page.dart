@@ -33,8 +33,8 @@ class MainPage extends StatelessWidget {
         alignment: Alignment.bottomCenter,
         child: Container(
           height: 84,
-          width: 360,
-          color: whiteColor,
+          width: double.infinity,
+          color: greyColor,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
