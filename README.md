@@ -1,6 +1,6 @@
 # future_job
 
-A new Flutter project.
+Flutter app job search 
 
 ## Getting Started
 
